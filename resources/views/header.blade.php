@@ -62,7 +62,7 @@
                   
                   $us = session('user');
                 @endphp
-                    <a class="nav-link d-sm-flex align-items" href="#">
+                    <a class="nav-link d-sm-flex align-items" href="/dashboard">
                       <img src="{{asset('img/maquina.png')}}" class="rounded-circle" height="25" width="25" alt="" loading="lazy" style="align-self: center">
                       <span class="fw-bold" style="align-self: center">{{$us->username}}</span>
                     </a>

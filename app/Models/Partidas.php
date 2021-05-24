@@ -12,6 +12,7 @@ class Partidas extends Model
     protected $table = 'partidas';
 
     protected $fillable = [
+        'nombre',
         'users',
         'max',
         'system',
