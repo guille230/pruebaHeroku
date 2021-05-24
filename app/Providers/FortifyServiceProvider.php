@@ -13,9 +13,10 @@ use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
 use Laravel\Fortify\Http\Requests\LoginRequest;
 use App\Models\Usuarios;
-use Hash;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Hash as FacadesHash;
+use Illuminate\Support\Facades\Session;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -51,7 +52,8 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::authenticateUsing(function (Request $request) {
         $user = Usuarios::where('username', $request->username)->first();
-
+        Session::put('user', $user);
+        
         if ($user &&
             Hash::check($request->password, $user->password)) {
             return $user;

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  @php
+    session_start();
+  @endphp
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,9 +57,15 @@
         <ul class="navbar-nav flex-row">
           <li class="nav-item me-3 me-lg-1">
             @if (Route::has('login'))
-            <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                @php
+                  
+                  $us = session('user');
+                @endphp
+                    <a class="nav-link d-sm-flex align-items" href="#">
+                      <img src="{{asset('img/maquina.png')}}" class="rounded-circle" height="25" width="25" alt="" loading="lazy" style="align-self: center">
+                      <span class="fw-bold" style="align-self: center">{{$us->username}}</span>
+                    </a>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>
 
