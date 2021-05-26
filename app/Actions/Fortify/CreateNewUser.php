@@ -7,6 +7,8 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Jetstream\Jetstream;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 class CreateNewUser implements CreatesNewUsers
 {
@@ -39,7 +41,7 @@ class CreateNewUser implements CreatesNewUsers
             'preferences' => ['required', 'string', 'max:255']
         ])->validate();
 
-        return Usuarios::create([
+        $userCreated = Usuarios::create([
             'username' => $input['username'],
             'email' => $input['email'],
             'password' => Hash::make($input['password']),
@@ -57,5 +59,20 @@ class CreateNewUser implements CreatesNewUsers
             'games' => $input['games'],
             'preferences' => $input['preferences'],
         ]);
+
+        $userSession = DB::table('usuarios')
+        ->join('iconos', 'usuarios.iconousado', '=', 'iconos.id')
+        ->join('banners', 'usuarios.bannerusado', '=', 'banners.id')
+        ->select('usuarios.*', 'iconos.iconImage','banners.bannerImage')
+        ->where('usuarios.username',$input['username'])
+        ->first();
+
+        Session::put('user', $userSession);
+
+        return $userCreated;
+
+        
+        
+        
     }
 }

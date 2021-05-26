@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Support\Facades\Hash as FacadesHash;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\DB;
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -52,7 +53,15 @@ class FortifyServiceProvider extends ServiceProvider
 
         Fortify::authenticateUsing(function (Request $request) {
         $user = Usuarios::where('username', $request->username)->first();
-        Session::put('user', $user);
+
+        $userSession = DB::table('usuarios')
+        ->join('iconos', 'usuarios.iconousado', '=', 'iconos.id')
+        ->join('banners', 'usuarios.bannerusado', '=', 'banners.id')
+        ->select('usuarios.*', 'iconos.iconImage','banners.bannerImage')
+        ->where('usuarios.username',$request->username)
+        ->first();
+        
+        Session::put('user', $userSession);
         
         if ($user &&
             Hash::check($request->password, $user->password)) {

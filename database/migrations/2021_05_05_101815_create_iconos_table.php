@@ -15,7 +15,7 @@ class CreateIconosTable extends Migration
     {
         Schema::create('iconos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('image');
+            $table->text('iconImage');
         });
     }
 

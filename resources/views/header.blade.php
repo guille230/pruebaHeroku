@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   @php
     session_start();
@@ -30,7 +30,7 @@
         <div class="d-flex">
           <!-- Logo -->
           <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="{{route('index')}}">
-            <img src="https://mdbootstrap.com/img/logo/mdb-transaprent-noshadows.png" height="20" alt="" loading="lazy" style="margin-top: 2px;" />
+            <img src="{{asset('img/Fireroll.png')}}" height="60" width="60" alt="" loading="lazy" style="margin-top: 2px;" />
           </a>
         </div>
         <!-- Iconos centro -->
@@ -63,8 +63,8 @@
                   $us = session('user');
                 @endphp
                     <a class="nav-link d-sm-flex align-items" href="/dashboard">
-                      <img src="{{asset('img/maquina.png')}}" class="rounded-circle" height="25" width="25" alt="" loading="lazy" style="align-self: center">
-                      <span class="fw-bold" style="align-self: center">{{$us->username}}</span>
+                      <img src="{{$us->iconImage}}" class="rounded-circle" height="40" width="40" alt="" loading="lazy" style="align-self: center">
+                      <span class="fw-bold px-2" style="align-self: center;font-size:1rem">{{$us->username}}</span>
                     </a>
                 @else
                     <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Login</a>

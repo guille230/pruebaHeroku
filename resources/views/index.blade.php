@@ -2,6 +2,9 @@
 <body>
   @include('header')
   <!-- Body -->
+  @php
+    $us = session('user');
+  @endphp
   <main>
     <div class="container">
       <div class="row inicio">
@@ -11,7 +14,7 @@
           <p class="indexDesc my-3">Gracias a nuestras nuevas tecnologias podras dar rienda suelta a tu imaginacion y tus tiradas de dados se sentiran igual que si estuvieras en fisico</p>
         </div>
         <div class="col-6 imgInicio d-flex align-items-center">
-          <img src="{{asset('img/dados.jpg')}}" class="img-fluid dados">
+          <img src="{{asset("img/dados.jpg")}}" class="img-fluid dados">
         </div>
       </div>
     </div>
@@ -98,19 +101,19 @@
               <div class="swiper-slide">
                 <div class="testimonios">
                   <div class="autor d-flex flex-column">
-                    <img src="{{asset('img/Mago.jpg')}}" class="rounded-circle b-shadow-a img-fluid personitas mx-auto">
+                    <img src="{{asset('img/Mago.png')}}" class="rounded-circle b-shadow-a img-fluid personitas mx-auto">
                     <span class="autor">Mago supremo</span>
                   </div>
                   <div class="contenidoAutor">
-                    <p class="testimonio">Esta pagina me ha permitido poder juntarme con gente nueva y poder por fin tener un grupo de personas con las que jugar de manera frecuente a rol</p>
+                    <p class="testimonio">Esta pagina me ha permitido poder relacionarme con gente nueva y poder por fin tener un grupo de personas con las que jugar de manera frecuente a rol</p>
                   </div>
                 </div>
               </div>
               <div class="swiper-slide">
                 <div class="testimonios">
                   <div class="autor d-flex flex-column">
-                    <img src="{{asset('img/Mecanico.jpg')}}" class="rounded-circle b-shadow-a img-fluid personitas mx-auto">
-                    <span class="autor">El maestro técnico</span>
+                    <img src="{{asset('img/Mecanico.png')}}" class="rounded-circle b-shadow-a img-fluid personitas mx-auto">
+                    <span class="autor">El maestro tecnico</span>
                   </div>
                   <div class="contenidoAutor">
                     <p class="testimonio">Esta bien esta bien Javier.</p>
@@ -131,18 +134,22 @@
           </div>
         </div>
       </div>
-      <div class="row logos align-items-center justify-content-around d-flex">
+      <div class="row logos align-items-center  justify-content-around ">
         <div class="logoContainer px-2 px-lg-3 border-bottom text-center">
-          <a href="#" class="mx-3"><img src="{{asset('img/dd.png')}}" class="img-fluid logo"></a>
-          <a href="#" class="mx-3"><img src="{{asset('img/Pathfinder.png')}}" class="img-fluid logo"></a>
-          <a href="#" class="mx-3"><img src="{{asset('img/chinu.png')}}" class="img-fluid logo"></a>
-          <a href="#" class="mx-3"><img src="{{asset('img/BurnBryte.png')}}" class="img-fluid logo"></a>
+        <div class="row d-flex justify-content-center">
+        <a href="#"   class="mx-3 col-12 col-md-2"><img src="{{asset('img/dd.png')}}" class="img-fluid logo" style="margin: 0 auto"></a>
+          <a href="#" class="mx-3 col-12 col-md-2"><img src="{{asset('img/Pathfinder.png')}}" class="img-fluid logo" style="margin: 0 auto"></a>
+          <a href="#" class="mx-3 col-12 col-md-2"><img src="{{asset('img/chinu.png')}}" class="img-fluid logo" style="margin: 0 auto"></a>
+          <a href="#" class="mx-3 col-12 col-md-2"><img src="{{asset('img/BurnBryte.png')}}" class="img-fluid logo" style="margin: 0 auto"></a>
+        </div>
+          
         </div>
         <div class="logoContainer px-2 px-lg-3 text-center">
-          <a href="#" class="mx-4"><img src="{{asset('img/FATE-Core.png')}}" class="img-fluid logo"></a>
-          <a href="#" class="mx-4"><img src="{{asset('img/Okinawaa.png')}}" class="img-fluid logo"></a>
+        <div class="row d-flex justify-content-center ">
+          <a href="#" class="mx-4 col-12 col-md-2"><img src="{{asset('img/FATE-Core.png')}}" class="img logo align-content-middle" style="margin: 0 auto"></a>
+          <a href="#" class="mx-4 col-12 col-md-2 mt-sm-0 mt-5"><img src="{{asset('img/Okinawaa.png')}}" class="img logo align-content-middle" style="margin: 0 auto"></a>
           <!-- Damn -->
-          <a href="#" class="mx-4"><img src="{{asset('img/Forehead.png')}}" class="img-fluid logo"></a>
+          <a href="#" class="mx-4 col-12 col-md-2"><img src="{{asset('img/Forehead.png')}}" class="img logo" style="margin: 0 auto"></a></div>
         </div>
       </div>
     </div>
