@@ -62,7 +62,7 @@
                   
                   $us = session('user');
                 @endphp
-                    <a class="nav-link d-sm-flex align-items" href="/dashboard">
+                    <a class="nav-link d-sm-flex align-items" href="{{route('perfil')}}">
                       <img src="{{$us->iconImage}}" class="rounded-circle" height="40" width="40" alt="" loading="lazy" style="align-self: center">
                       <span class="fw-bold px-2" style="align-self: center;font-size:1rem">{{$us->username}}</span>
                     </a>

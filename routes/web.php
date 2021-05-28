@@ -6,6 +6,7 @@ use App\Http\Controllers\ShopController;
 use App\Http\Controllers\GameController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\perfilController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -41,3 +42,5 @@ Route::post('/getCat', [BlogController::class, 'ajaxRequest'])->name('getCat');
 
 Route::get('/partidas', [GameController::class, 'index']);
 Route::get('/partida-Detalle', [GameController::class, 'getPartida'])->name('getPartida'); 
+
+Route::get('/perfil', [perfilController::class, 'index'])->name("perfil");
