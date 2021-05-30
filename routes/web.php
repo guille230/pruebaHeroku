@@ -1,10 +1,10 @@
 <?php
+use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\pruebaController;
 use App\Http\Controllers\registrationController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ShopController;
 use App\Http\Controllers\GameController;
-use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\perfilController;
 use Illuminate\Support\Facades\Auth;
@@ -29,18 +29,24 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+//Tienda 
+
 Route::get('/shop', [ShopController::class, 'index'])->name('shop');
 
 Route::post('/shop/productDetail',[ShopController::class, 'getProducto'])->name('productDetail');
 
-/* Blog */ 
+// Blog  
 Route::get('/blog', [BlogController::class, 'index']);
 Route::post('/blog/detail', [BlogController::class, 'getEntrada'])->name('blogDetail');
 Route::post('/getCat', [BlogController::class, 'ajaxRequest'])->name('getCat');
 
 // Games
 
-Route::get('/partidas', [GameController::class, 'index']);
+Route::get('/partidas', [GameController::class, 'index'])->name('partidas');
 Route::get('/partida-Detalle', [GameController::class, 'getPartida'])->name('getPartida'); 
 
+//Perfil
+
 Route::get('/perfil', [perfilController::class, 'index'])->name("perfil");
+Route::post('/perfil/bioRedirect', [perfilController::class, 'setBio'])->name("actuBio");
+Route::post('/perfil/iconRedirect', [perfilController::class, 'changeIcon'])->name("actuIcon");

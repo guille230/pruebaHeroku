@@ -12,13 +12,16 @@ class perfilController extends Controller
     public function index(){
 
         $us = session('user');
+
         $partidasUsuario = DB::table('usuarios_partidas')
         ->join('partidas', 'usuarios_partidas.id_partidas', '=', 'partidas.id')
         ->select('usuarios_partidas.*', 'partidas.*')
         ->where('usuarios_partidas.id_usuarios',$us->id)
         ->get();
 
-        return view('perfil')->with(['user'=>$us, 'partidas', 'partidas'=> $partidasUsuario]);
+        $iconos = DB::table('iconos')->get();
+
+        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos]);
     }
 
     public function setBio(Request $request){
@@ -32,12 +35,20 @@ class perfilController extends Controller
         ->join('iconos', 'usuarios.iconousado', '=', 'iconos.id')
         ->join('banners', 'usuarios.bannerusado', '=', 'banners.id')
         ->select('usuarios.*', 'iconos.iconImage','banners.bannerImage')
-        ->where('usuarios.username',$request->username)
+        ->where('usuarios.id',$id)
         ->first();
-        
         Session::put('user', $us);
 
-        return view('perfil')->with(['user'=>$us]);
+        $partidasUsuario = DB::table('usuarios_partidas')
+        ->join('partidas', 'usuarios_partidas.id_partidas', '=', 'partidas.id')
+        ->select('usuarios_partidas.*', 'partidas.*')
+        ->where('usuarios_partidas.id_usuarios',$id)
+        ->get();
+
+        $iconos = DB::table('iconos')->get();
+
+
+        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos]);
     }
 
     public function changeIcon(Request $request){
@@ -51,12 +62,20 @@ class perfilController extends Controller
         ->join('iconos', 'usuarios.iconousado', '=', 'iconos.id')
         ->join('banners', 'usuarios.bannerusado', '=', 'banners.id')
         ->select('usuarios.*', 'iconos.iconImage','banners.bannerImage')
-        ->where('usuarios.username',$request->username)
+        ->where('usuarios.id',$id)
         ->first();
-        
         Session::put('user', $us);
 
-        return view('perfil')->with(['user'=>$us]);
+        $partidasUsuario = DB::table('usuarios_partidas')
+        ->join('partidas', 'usuarios_partidas.id_partidas', '=', 'partidas.id')
+        ->select('usuarios_partidas.*', 'partidas.*')
+        ->where('usuarios_partidas.id_usuarios',$id)
+        ->get();
+
+        $iconos = DB::table('iconos')->get();
+
+
+        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos]);
 
     }
 
@@ -71,11 +90,19 @@ class perfilController extends Controller
         ->join('iconos', 'usuarios.iconousado', '=', 'iconos.id')
         ->join('banners', 'usuarios.bannerusado', '=', 'banners.id')
         ->select('usuarios.*', 'iconos.iconImage','banners.bannerImage')
-        ->where('usuarios.username',$request->username)
+        ->where('usuarios.id',$id)
         ->first();
-        
         Session::put('user', $us);
 
-        return view('perfil')->with(['user'=>$us]);
+        $partidasUsuario = DB::table('usuarios_partidas')
+        ->join('partidas', 'usuarios_partidas.id_partidas', '=', 'partidas.id')
+        ->select('usuarios_partidas.*', 'partidas.*')
+        ->where('usuarios_partidas.id_usuarios',$id)
+        ->get();
+
+        $iconos = DB::table('iconos')->get();
+
+
+        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos]);
     }
 }

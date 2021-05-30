@@ -9,7 +9,7 @@
     <div class="container">
       <div class="row inicio">
         <div class=" col-6 descripcion d-flex align-items-center flex-column">
-          <h1 style="font-size: 4rem;">¿Que es Fireroll?</h1>
+          <h1 style="font-size: 4rem;">¿Qué es Fireroll?</h1>
           <p class="indexDesc my-3">Fireroll es tu punto de partida para conocer a nuevas personas para introduciros en el mundo del rol.</p>
           <p class="indexDesc my-3">Gracias a nuestras nuevas tecnologias podras dar rienda suelta a tu imaginacion y tus tiradas de dados se sentiran igual que si estuvieras en fisico</p>
         </div>
@@ -27,7 +27,7 @@
               <div class="mb-3">
                 <span><i class="fas fa-journal-whills indexCards"></i></span>
               </div>
-              <h3 class="h4">¿Por que usar nuestra página?</h3>
+              <h3 class="h4">¿Por qué usar nuestra página?</h3>
               <p class="m-0">Gracias a nuestra página, puedes encontrar una campaña perfecta para tí en poco tiempo</p>
             </div>
           </div>

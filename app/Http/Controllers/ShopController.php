@@ -15,7 +15,7 @@ class ShopController extends Controller
     public function getProducto(Request $request){
 
         $id = request('id');
-        $entrada = DB::table('productos')->where('id',$id)->first();
-        return view('shop.productDetail',['entrada' => $entrada]);
+        $producto = DB::table('productos')->where('id',$id)->first();
+        return view('shop.productDetail',['producto' => $producto]);
     }
 }

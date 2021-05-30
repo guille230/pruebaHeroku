@@ -43,7 +43,7 @@
           </li>
           <!-- Partidas -->
           <li class="nav-item me-3 me-lg-1">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="{{route('partidas')}}">
               <span><i class="fas fa-dice-d20 dado"></i></span>
             </a>
           </li>
@@ -59,7 +59,6 @@
             @if (Route::has('login'))
                 @auth
                 @php
-                  
                   $us = session('user');
                 @endphp
                     <a class="nav-link d-sm-flex align-items" href="{{route('perfil')}}">
