@@ -55,13 +55,12 @@
             </div>
 
             <div>
-                <x-jet-label for="bio" value="{{ __('Bio') }}" />
-                <x-jet-input id="bio" class="block mt-1 w-full" type="textarea" name="bio" :value="old('bio')" autofocus autocomplete="bio" />
+                <x-jet-label for="preferences" value="{{ __('preferences') }}" />
+                <x-jet-input id="preferences" class="block mt-1 w-full" type="text" name="preferences" :value="old('preferences')" autofocus autocomplete="preferences" />
             </div>
 
             <div>
-                <x-jet-label for="preferences" value="{{ __('preferences') }}" />
-                <x-jet-input id="preferences" class="block mt-1 w-full" type="text" name="preferences" :value="old('preferences')" autofocus autocomplete="preferences" />
+                <x-jet-input id="bio" class="block mt-1 w-full" type="hidden" name="bio" :value="'Tu bio va aqui'" autofocus/>
             </div>
             
             <div>
@@ -85,7 +84,7 @@
             </div>
 
             <div>
-                <x-jet-input id="games" class="block mt-1 w-full" type="hidden" name="games" :value="'juego'" required autofocus autocomplete="games" />
+                <x-jet-input id="games" class="block mt-1 w-full" type="hidden" name="games" :value="'0'" required autofocus autocomplete="games" />
             </div>
            
 

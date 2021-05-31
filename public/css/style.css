@@ -321,3 +321,15 @@ body {
     border-radius: 6rem;
     padding: 3px;
 }
+
+.fa-pencil-alt:hover{
+    color: blue;
+    cursor:pointer;
+}
+
+.bannerPencil{
+    position: absolute;
+    text-align: end;
+    padding-right: 1.6rem;
+    padding-top: 0.7rem;
+}

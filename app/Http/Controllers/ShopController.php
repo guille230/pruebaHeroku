@@ -18,4 +18,12 @@ class ShopController extends Controller
         $producto = DB::table('productos')->where('id',$id)->first();
         return view('shop.productDetail',['producto' => $producto]);
     }
+
+    public function filtrado(Request $request){
+        $filtro =$request->filtro;
+
+        $producto = DB::table('productos')->where('tags', $filtro)->get();
+
+        return view('shop.shopLanding',['productos' => $producto]);
+    }
 }

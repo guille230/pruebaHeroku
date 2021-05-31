@@ -15,6 +15,8 @@ class Usuarios extends Model  implements AuthenticatableContract
     protected $table = 'usuarios';
 
     protected $fillable = [
+        'nombre',
+        'apellidos',
         'username',
         'password',
         'email',

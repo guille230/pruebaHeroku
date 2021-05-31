@@ -36,8 +36,8 @@ class CreateNewUser implements CreatesNewUsers
             'banner' => ['required', 'string', 'max:255'],
             'iconousado' => ['required', 'integer', 'max:255'],
             'bannerusado' => ['required', 'integer', 'max:255'],
-            'bio' => ['required', 'string', 'max:500'],
-            'games' => ['required', 'string', 'max:255'],
+            'bio' => ['string', 'max:500'],
+            'games' => ['string', 'max:255'],
             'preferences' => ['required', 'string', 'max:255']
         ])->validate();
 

@@ -20,8 +20,10 @@ class perfilController extends Controller
         ->get();
 
         $iconos = DB::table('iconos')->get();
+        $banners = DB::table('banners')->get();
 
-        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos]);
+
+        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos,'banners'=> $banners]);
     }
 
     public function setBio(Request $request){
@@ -46,9 +48,10 @@ class perfilController extends Controller
         ->get();
 
         $iconos = DB::table('iconos')->get();
+        $banners = DB::table('banners')->get();
 
 
-        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos]);
+        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos,'banners'=> $banners]);
     }
 
     public function changeIcon(Request $request){
@@ -73,9 +76,10 @@ class perfilController extends Controller
         ->get();
 
         $iconos = DB::table('iconos')->get();
+        $banners = DB::table('banners')->get();
 
 
-        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos]);
+        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos,'banners'=>$banners]);
 
     }
 
@@ -101,8 +105,9 @@ class perfilController extends Controller
         ->get();
 
         $iconos = DB::table('iconos')->get();
+        $banners = DB::table('banners')->get();
 
 
-        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos]);
+        return view('perfil')->with(['user'=>$us, 'partidas'=> $partidasUsuario,'iconos' => $iconos,'banners'=> $banners]);
     }
 }

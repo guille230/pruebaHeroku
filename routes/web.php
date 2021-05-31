@@ -32,7 +32,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //Tienda 
 
 Route::get('/shop', [ShopController::class, 'index'])->name('shop');
-
+Route::post('shop/filtro',[ShopController::class,'filtrado'])->name('filtro');
 Route::post('/shop/productDetail',[ShopController::class, 'getProducto'])->name('productDetail');
 
 // Blog  
@@ -50,3 +50,5 @@ Route::get('/partida-Detalle', [GameController::class, 'getPartida'])->name('get
 Route::get('/perfil', [perfilController::class, 'index'])->name("perfil");
 Route::post('/perfil/bioRedirect', [perfilController::class, 'setBio'])->name("actuBio");
 Route::post('/perfil/iconRedirect', [perfilController::class, 'changeIcon'])->name("actuIcon");
+Route::post('/perfil/bannerRedirect', [perfilController::class, 'changeBanner'])->name("actuBanner");
+
