@@ -16,7 +16,6 @@ class Usuarios extends Model  implements AuthenticatableContract
 
     protected $fillable = [
         'nombre',
-        'apellidos',
         'username',
         'password',
         'email',
@@ -26,8 +25,6 @@ class Usuarios extends Model  implements AuthenticatableContract
         'age',
         'location',
         'country',
-        'icon',
-        'banner',
         'iconousado',
         'bannerusado',
         'bio',

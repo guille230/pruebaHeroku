@@ -13,7 +13,7 @@ class Partidas extends Model
 
     protected $fillable = [
         'nombre',
-        'users',
+        'creator',
         'max',
         'system',
         'type',

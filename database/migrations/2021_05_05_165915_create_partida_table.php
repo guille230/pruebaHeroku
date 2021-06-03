@@ -16,7 +16,7 @@ class CreatePartidaTable extends Migration
         Schema::create('partidas', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nombre');
-            $table->foreignId('users');
+            $table->foreignId('creator');
             $table->integer('max');
             $table->string('system');
             $table->integer('type');
@@ -25,7 +25,7 @@ class CreatePartidaTable extends Migration
             $table->text('description');
             $table->text('tags');
 
-            $table->foreign('users')->references('id')->on('usuarios');
+            $table->foreign('creator')->references('id')->on('usuarios');
         });
     }
 

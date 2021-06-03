@@ -10,6 +10,11 @@
             @csrf
 
             <div>
+                <x-jet-label for="name" value="{{ __('Name') }}" />
+                <x-jet-input id="name" class="block mt-1 w-full my-4" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
+            </div>
+
+            <div>
                 <x-jet-label for="username" value="{{ __('Username') }}" />
                 <x-jet-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
             </div>
@@ -63,14 +68,6 @@
                 <x-jet-input id="bio" class="block mt-1 w-full" type="hidden" name="bio" :value="'Tu bio va aqui'" autofocus/>
             </div>
             
-            <div>
-                <x-jet-input id="icon" class="block mt-1 w-full" type="hidden" name="icon" :value=1 autofocus autocomplete="icon" />
-            </div>
-
-            <div>
-                <x-jet-input id="banner" class="block mt-1 w-full" type="hidden" name="banner" :value=1 autofocus autocomplete="banner" />
-            </div>
-
             <div>
                 <x-jet-input id="iconousado" class="block mt-1 w-full" type="hidden" name="iconousado" :value=1 autofocus autocomplete="iconousado" />
             </div>

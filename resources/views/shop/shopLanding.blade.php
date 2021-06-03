@@ -46,10 +46,10 @@
  <div class="container">
 
     
-    <div class="row d-flex justify-content-center text-center align-content-center mx-0">
+    <div class="row d-flex text-center">
         
             @foreach ($productos as $articulo)
-            <div class="col-12">
+            <div class="col-4 my-3 d-flex justify-content-center">
                 <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="{{$articulo->image}}" alt="Card image cap">
                 <div class="card-body">
@@ -59,7 +59,7 @@
                   <form action="{{route('productDetail')}}" method="POST">
                     @csrf
                     <input type="hidden" name="id" value="{{$articulo->id}}">
-                    <input class="btn btn-primary" type="submit" value="Comprar">
+                    <input class="btn btn-primary" type="submit" value="Comprar"> 
                   </form>
                 </div>
               </div>

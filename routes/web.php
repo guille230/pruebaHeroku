@@ -36,7 +36,7 @@ Route::post('shop/filtro',[ShopController::class,'filtrado'])->name('filtro');
 Route::post('/shop/productDetail',[ShopController::class, 'getProducto'])->name('productDetail');
 
 // Blog  
-Route::get('/blog', [BlogController::class, 'index']);
+Route::get('/blog', [BlogController::class, 'index'])->name('blog');
 Route::post('/blog/detail', [BlogController::class, 'getEntrada'])->name('blogDetail');
 Route::post('/getCat', [BlogController::class, 'ajaxRequest'])->name('getCat');
 
@@ -44,6 +44,7 @@ Route::post('/getCat', [BlogController::class, 'ajaxRequest'])->name('getCat');
 
 Route::get('/partidas', [GameController::class, 'index'])->name('partidas');
 Route::get('/partida-Detalle', [GameController::class, 'getPartida'])->name('getPartida'); 
+Route::post('/partidas', [GameController::class, 'filtradoPartidas'])->name("filterGames");
 
 //Perfil
 

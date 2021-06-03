@@ -21,39 +21,46 @@
                         <h3 class="text-center">Tipo</h3>
                     </div>
                     <div class="col-12 col-sm-2 d-flex align-items-center">
-                        <select class="form-select w-70" aria-label="Default select example">
-                            <option value="" selected>Escoja un tipo...</option>
-                            <option value="Campana">Campaña</option>
-                            <option value="OneShot">OneShot</option>
-                            <option value="Iniciación">Iniciación</option>
+                        <form action="{{route('filterGames')}}" method="POST">
+                            @csrf
+                        <select class="form-select w-70" name ="type" aria-label="Tipo" onchange="this.form.submit()">
+                            <option value="x" selected>Escoja un tipo...</option>
+                            <option value="0">Campaña</option>
+                            <option value="1">OneShot</option>
+                            <option value="3">Iniciación</option>
                         </select>
+                    
                     </div>
                     <div class="col-12 col-sm-2">
                         <h3 class="text-center">Sistema</h3>
                     </div>
                     <div class="col-12 col-sm-2 d-flex align-items-center ">
-                        <select class="form-select w-70" aria-label="Default select example">
-                            <option value="" selected>Escoja un sistema...</option>
+                        
+                        <select class="form-select w-70" name ="system" aria-label="Sistema" onchange="this.form.submit()">
+                            <option value="x" selected>Escoja un sistema...</option>
                             <option value="DnD">DnD</option>
                             <option value="Anima">Anima</option>
-                            <option value="PathFinder">PathFinder</option>
+                            <option value="Pathfinder">PathFinder</option>
                             <option value="Aquelarre">Aquelarre</option>
-                            <option value="Call of Cthulhu">Call of Cthulhu</option>
+                            <option value="Chulu">Call of Cthulhu</option>
                             <option value="BurnBryte">BurnBryte</option>
                             <option value="Fate">Fate</option>
-                            <option value="Aquelarre">Aquelarre</option>
                             <option value="Otro">Otro</option>
                         </select>
+                   
                     </div>
                     <div class="col-12 col-sm-2">
                         <h3 class="text-center">Ordenar por</h3>
                     </div>
                     <div class="col-12 col-sm-2 d-flex align-items-center ">
-                        <select class="form-select w-70" aria-label="Default select example">
-                            <option value="reciente" selected>Mas reciente</option>
-                            <option value="antigua">Mas antigua</option>
+                        
+                        <select class="form-select w-70" name ="order" aria-label="Orden" onchange="this.form.submit()">
+                            <option value="desc" selected>Mas reciente</option>
+                            <option value="asc">Mas antigua</option>
                         </select>
+                    
                     </div>
+                </form>
                 </div>
             </div>
 
@@ -84,7 +91,7 @@
                             <p><?php echo $cortado; ?></p>
                         </div>
                         <div class="col-md-4 text-center">
-                            <p>Jugadores: {{$salas->users}}</p>
+                            <p>Jugadores: {{$salas->max}}</p>
                         </div>
                     </div>
                     <div class="row mt-2">
