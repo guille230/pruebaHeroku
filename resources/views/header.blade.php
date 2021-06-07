@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    @php
-    session_start();
-    @endphp
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,25 +42,25 @@
             <ul class="navbar-nav flex-row d-md-flex">
                 <li class="nav-item me-3 me-lg-1 active">
                     <a class="nav-link" href="{{route('index')}}">
-                        <span><i class="fas fa-home fa-lg casa hvr-grow"></i></span>
+                        <span><i class="fas fa-home fa-lg casa hvr-grow" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Inicio"></i></span>
                     </a>
                 </li>
                 <!-- Partidas -->
                 <li class="nav-item me-3 me-lg-1">
                     <a class="nav-link" href="{{route('partidas')}}">
-                        <span><i class="fas fa-dice-d20 dado"></i></span>
+                        <span><i class="fas fa-dice-d20 dado" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Partidas"></i></span>
                     </a>
                 </li>
                 <!-- Tienda -->
                 <li class="nav-item me-3 me-lg-1">
                     <a class="nav-link" href="{{route('shop')}}">
-                        <span><i class="fas fa-shopping-bag fa-lg hvr-wobble-horizontal tienda"></i></span>
+                        <span><i class="fas fa-shopping-bag fa-lg hvr-wobble-horizontal tienda" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tienda"></i></span>
                     </a>
                 </li>
                 <!-- blog -->
                 <li class="nav-item me-3 me-lg-1">
                     <a class="nav-link" href="{{route('blog')}}">
-                        <span><i class="fas fa-newspaper blog hvr-grow-rotate"></i></span>
+                        <span><i class="fas fa-newspaper blog hvr-grow-rotate" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Blog"></i></span>
                     </a>
                 </li>
             </ul>
@@ -121,5 +118,10 @@
                 }
             });
         }
+
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
 
     </script>

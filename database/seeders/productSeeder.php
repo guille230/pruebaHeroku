@@ -40,7 +40,7 @@ class productSeeder extends Seeder
             'cost' => 15,
             'stock' => 80,
             'dealer' => 'Dice Adventure',
-            'image' => 'https://drive.google.com/file/d/1NaN365sAsFhSWWdH9jn3AU-Oab1SypL1/view?usp=sharing',
+            'image' => 'http://drive.google.com/uc?export=view&id=1NaN365sAsFhSWWdH9jn3AU-Oab1SypL1',
             'tags' => 'dados'
 
         ]);
@@ -51,7 +51,7 @@ class productSeeder extends Seeder
             'cost' => 25,
             'stock' => 40,
             'dealer' => 'Wizards of the Coast',
-            'image' => 'https://drive.google.com/file/d/1NQZuFlSPMSWXSHBhNTeIZ4pEqPQkK5rx/view?usp=sharing',
+            'image' => 'http://drive.google.com/uc?export=view&id=1NQZuFlSPMSWXSHBhNTeIZ4pEqPQkK5rx',
             'tags' => 'mapas'
         ]);
     }

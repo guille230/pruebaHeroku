@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class ShopController extends Controller
 {
@@ -25,5 +26,13 @@ class ShopController extends Controller
         $producto = DB::table('productos')->where('tags', $filtro)->get();
 
         return view('shop.shopLanding',['productos' => $producto]);
+    }
+
+    public function añadirCarrito(Request $request){
+        $id = request('idProducto');
+        $producto = DB::table('productos')->where('id',$id)->first();
+        Session::put('carrito', $producto);
+        $productos = DB::table('productos')->get();
+        return view('shop.shopLanding')->with(['productos'=>$productos]);
     }
 }

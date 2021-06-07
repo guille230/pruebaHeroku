@@ -32,8 +32,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 //Tienda 
 
 Route::get('/shop', [ShopController::class, 'index'])->name('shop');
-Route::post('shop/filtro',[ShopController::class,'filtrado'])->name('filtro');
+Route::post('/shop/filtro',[ShopController::class,'filtrado'])->name('filtro');
 Route::post('/shop/productDetail',[ShopController::class, 'getProducto'])->name('productDetail');
+Route::post('/shop',[ShopController::class,'añadirCarrito'])->name('añadirCarrito');
 
 // Blog  
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
