@@ -47,7 +47,7 @@ Route::post('/getCat', [BlogController::class, 'ajaxRequest'])->name('getCat');
 Route::get('/partidas', [GameController::class, 'index'])->name('partidas');
 Route::get('/partida-Detalle', [GameController::class, 'getPartida'])->name('getPartida'); 
 Route::post('/partidas', [GameController::class, 'filtradoPartidas'])->name("filterGames");
-Route::get('/partidas/crear', [GameController::class, 'crearPartidas'])->name("crearPartida");
+Route::view('/partidas/crear', 'Games.formularioCrear')->name("crearPartida");
 
 //Perfil
 
