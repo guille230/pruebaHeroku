@@ -10,7 +10,7 @@
                 </div>
                 <div class="row d-flex justify-content-center my-2">
                     <div class="col-12 col-md-5">
-                        <a href="{{route('crearPartida')}}" class="btn btn-primary">
+                        <a href="{{route('formularioPartida')}}" class="btn btn-primary">
                             <i class="fas fa-plus"></i>
                         </a>
                     </div>
