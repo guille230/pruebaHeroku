@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Iconos extends Model
 {
     use HasFactory;
-
+    public $timestamps = false;
     protected $table = 'iconos';
 
     protected $fillable = [

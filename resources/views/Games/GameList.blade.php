@@ -3,27 +3,17 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-center text-center">
             <div class="container">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <span class="tituloFiltro">Filtro</span>
+                <div class="row" style="margin-bottom: 4rem">
+                    <div class="col-12">
+                        <h1 class="text-uppercase fs-1">Partidas</h1>
                     </div>
                 </div>
-                <div class="row">
-                    <nav class="navbar navbar-light  col-12 d-flex justify-content-center">
-                        <form class="form-inline mt-3">
-                            <input class="mr-sm-2 buscadorCustom" type="search" placeholder="Introduce la búsqueda" aria-label="Buscar">
-                            <button class="btn btn-outline-success my-2 my-sm-0 w-20" type="submit">Buscar</button>
-                        </form>
-                    </nav>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-sm-2">
-                        <h3 class="text-center">Tipo</h3>
-                    </div>
+                <div class="row d-flex justify-content-evenly">
                     <div class="col-12 col-sm-2 d-flex align-items-center">
-                        <form action="{{route('filterGames')}}" method="POST">
+                        <form action="{{route('filterGames')}}" method="POST" class="d-flex">
                             @csrf
-                        <select class="form-select w-70" name ="type" aria-label="Tipo" onchange="this.form.submit()">
+                        <label for="tipo" class="title mx-2">Tipooo</label>
+                        <select class="form-select w-70" id="tipo" name="type" aria-label="Tipo" onchange="this.form.submit()">
                             <option value="x" selected>Escoja un tipo...</option>
                             <option value="0">Campaña</option>
                             <option value="1">OneShot</option>
@@ -31,12 +21,9 @@
                         </select>
                     
                     </div>
-                    <div class="col-12 col-sm-2">
-                        <h3 class="text-center">Sistema</h3>
-                    </div>
-                    <div class="col-12 col-sm-2 d-flex align-items-center ">
-                        
-                        <select class="form-select w-70" name ="system" aria-label="Sistema" onchange="this.form.submit()">
+                    <div class="col-12 col-sm-2 d-flex align-items-center">
+                        <label for="system" class="title mx-2">Sistema</label>
+                        <select class="form-select w-70" name="system" id="system" aria-label="Sistema" onchange="this.form.submit()">
                             <option value="x" selected>Escoja un sistema...</option>
                             <option value="DnD">DnD</option>
                             <option value="Anima">Anima</option>
@@ -49,12 +36,9 @@
                         </select>
                    
                     </div>
-                    <div class="col-12 col-sm-2">
-                        <h3 class="text-center">Ordenar por</h3>
-                    </div>
                     <div class="col-12 col-sm-2 d-flex align-items-center ">
-                        
-                        <select class="form-select w-70" name ="order" aria-label="Orden" onchange="this.form.submit()">
+                        <label for="orden" class="title mx-2">Orden</label>
+                        <select class="form-select w-70" id="orden" name="order" aria-label="Orden" onchange="this.form.submit()">
                             <option value="desc" selected>Mas reciente</option>
                             <option value="asc">Mas antigua</option>
                         </select>

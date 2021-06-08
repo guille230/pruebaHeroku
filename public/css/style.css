@@ -16,6 +16,11 @@ h1, h2, h3{
     font-family: 'Odibee Sans', cursive;
 }
 
+.title{
+    font-size: 1.3rem;
+    font-family: 'Odibee Sans', cursive;
+}
+
 .dropdown-menu.show {
     top: 85% !important;
 }
