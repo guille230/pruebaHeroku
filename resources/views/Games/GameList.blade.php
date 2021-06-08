@@ -3,16 +3,23 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-center text-center">
             <div class="container">
-                <div class="row" style="margin-bottom: 4rem">
+                <div class="row" style="margin-bottom: 2rem">
                     <div class="col-12">
                         <h1 class="text-uppercase fs-1">Partidas</h1>
+                    </div>
+                </div>
+                <div class="row d-flex justify-content-center my-2">
+                    <div class="col-12 col-md-5">
+                        <a href="{{route('crearPartida')}}" class="btn btn-primary">
+                            <i class="fas fa-plus"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="row d-flex justify-content-evenly">
                     <div class="col-12 col-sm-2 d-flex align-items-center">
                         <form action="{{route('filterGames')}}" method="POST" class="d-flex">
                             @csrf
-                        <label for="tipo" class="title mx-2">Tipooo</label>
+                        <label for="tipo" class="title mx-2">Tipo:</label>
                         <select class="form-select w-70" id="tipo" name="type" aria-label="Tipo" onchange="this.form.submit()">
                             <option value="x" selected>Escoja un tipo...</option>
                             <option value="0">Campaña</option>
@@ -22,7 +29,7 @@
                     
                     </div>
                     <div class="col-12 col-sm-2 d-flex align-items-center">
-                        <label for="system" class="title mx-2">Sistema</label>
+                        <label for="system" class="title mx-2">Sistema:</label>
                         <select class="form-select w-70" name="system" id="system" aria-label="Sistema" onchange="this.form.submit()">
                             <option value="x" selected>Escoja un sistema...</option>
                             <option value="DnD">DnD</option>
@@ -37,7 +44,7 @@
                    
                     </div>
                     <div class="col-12 col-sm-2 d-flex align-items-center ">
-                        <label for="orden" class="title mx-2">Orden</label>
+                        <label for="orden" class="title mx-2">Orden:</label>
                         <select class="form-select w-70" id="orden" name="order" aria-label="Orden" onchange="this.form.submit()">
                             <option value="desc" selected>Mas reciente</option>
                             <option value="asc">Mas antigua</option>
