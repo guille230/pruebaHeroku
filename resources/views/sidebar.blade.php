@@ -39,7 +39,7 @@
                 </form>
       </ul>
    </nav>
-
+  </div>
    <script>
       $(document).ready(function () {
     var trigger = $('.hamburger'),

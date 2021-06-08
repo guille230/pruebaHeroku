@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    {{-- Fonts --}}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Odibee+Sans&display=swap" rel="stylesheet">
     {{-- <script src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> --}}
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -54,7 +57,7 @@
                 <!-- Tienda -->
                 <li class="nav-item me-3 me-lg-1">
                     <a class="nav-link" href="{{route('shop')}}">
-                        <span><i class="fas fa-shopping-bag fa-lg hvr-wobble-horizontal tienda" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tienda"></i></span>
+                        <span><i class="fas fa-shopping-bag fa-lg tienda" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Tienda"></i></span>
                     </a>
                 </li>
                 <!-- blog -->
@@ -78,7 +81,15 @@
                     </a>
 
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item" href="{{route('perfil')}}">Perfil</a></li>
+                        <li>
+                            <form method="POST" action="{{ route('perfil') }}">
+                                @csrf
+                                <input type="hidden" name="idus" value="{{$us->id}}">
+                                <a class="dropdown-item" onclick="event.preventDefault(); this.closest('form').submit();" style="cursor: pointer">
+                                    Perfil
+                                </a>
+                            </form>
+                        </li>
                       
                     @if ($us->type == 0)
                     <li><a href="{{route('/dashboard')}}">Dashboard</a></li>

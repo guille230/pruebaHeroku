@@ -35,6 +35,7 @@ Route::get('/shop', [ShopController::class, 'index'])->name('shop');
 Route::post('/shop/filtro',[ShopController::class,'filtrado'])->name('filtro');
 Route::post('/shop/productDetail',[ShopController::class, 'getProducto'])->name('productDetail');
 Route::post('/shop',[ShopController::class,'añadirCarrito'])->name('añadirCarrito');
+Route::post('/shop/comprado',[ShopController::class,'purchase'])->name('purchase');
 
 // Blog  
 Route::get('/blog', [BlogController::class, 'index'])->name('blog');
@@ -49,7 +50,7 @@ Route::post('/partidas', [GameController::class, 'filtradoPartidas'])->name("fil
 
 //Perfil
 
-Route::get('/perfil', [perfilController::class, 'index'])->name("perfil");
+Route::post('/perfil', [perfilController::class, 'index'])->name("perfil");
 Route::post('/perfil/bioRedirect', [perfilController::class, 'setBio'])->name("actuBio");
 Route::post('/perfil/iconRedirect', [perfilController::class, 'changeIcon'])->name("actuIcon");
 Route::post('/perfil/bannerRedirect', [perfilController::class, 'changeBanner'])->name("actuBanner");

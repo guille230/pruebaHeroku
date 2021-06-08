@@ -1,7 +1,9 @@
 @include('header')
  <div class="container">
   @include('sidebar')
-  @include('shop.carrito')
+  @if (session()->has('user'))
+    @include('shop.carrito')
+  @endif
     <div class="row d-flex text-center">   
             @foreach ($productos as $articulo)
             <div class="col-4 my-3 d-flex justify-content-center">
@@ -22,5 +24,4 @@
             @endforeach
     </div>
 </div>
-
 @include('footer')

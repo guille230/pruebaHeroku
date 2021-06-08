@@ -9,14 +9,21 @@ use Illuminate\Http\Request;
 
 class perfilController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
 
-        $us = session('user');
+        $id = request('idus');
+
+        $us = DB::table('usuarios')
+        ->join('iconos', 'usuarios.iconousado', '=', 'iconos.id')
+        ->join('banners', 'usuarios.bannerusado', '=', 'banners.id')
+        ->select('usuarios.*', 'iconos.iconImage','banners.bannerImage')
+        ->where('usuarios.id',$id)
+        ->first();
 
         $partidasUsuario = DB::table('usuarios_partidas')
         ->join('partidas', 'usuarios_partidas.id_partidas', '=', 'partidas.id')
         ->select('usuarios_partidas.*', 'partidas.*')
-        ->where('usuarios_partidas.id_usuarios',$us->id)
+        ->where('usuarios_partidas.id_usuarios', $id)
         ->get();
 
         $iconos = DB::table('iconos')->get();
