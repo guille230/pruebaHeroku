@@ -5,6 +5,9 @@
         <div class="col-12 text-center py-2"> 
         <h1>~ {{$partidas->nombre}} ~</h1>
         </div>
+            <div class="rounded discord">
+                <a href="https://discord.gg/X5SfqxZqur" target="_blank" class="hvr-grow d-flex disLink"><i class="fab fa-discord disIcon"></i></a>
+            </div>
     </div>
     <div class="row border border-dark">
         <div class="col-12 text-center py-2"> 

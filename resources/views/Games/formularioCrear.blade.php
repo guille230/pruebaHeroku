@@ -6,6 +6,7 @@
     <div class="row my-3 mx-3">
         <div class="col-12 bg-white">
             <form action="{{route('crearPartida')}}" method="POST">
+                @csrf
                 <!-- 2 column grid layout with text inputs for the first and last names -->
                 <div class="row mb-4 my-3 mx-3">
                   <div class="col">
@@ -42,9 +43,9 @@
                 <div class="form-outline mb-4 mx-3">
                     <select class="form-select" name="tipo" aria-label="Tipo Partida">
                         <option selected>Tipo de Partida</option>
-                        <option value="{{$type[0]}}">{{$type[0]}}</option>
-                        <option value="{{$type[1]}}">{{$type[1]}}</option>
-                        <option value="{{$type[2]}}">{{$type[2]}}</option>
+                        <option value=0>{{$type[0]}}</option>
+                        <option value=1>{{$type[1]}}</option>
+                        <option value=2>{{$type[2]}}</option>
                       </select>
                 </div>
             </div>
@@ -74,7 +75,6 @@
                 </div>
 
                 <input type="hidden" name="idus" value="{{$us->id}}">
-                <input type="hidden" name="fecha" value="{{$today}}">
 
                 <!-- Submit button -->
                 <button type="submit" class="btn btn-primary btn-block mb-4">Place order</button>

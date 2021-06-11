@@ -13,11 +13,15 @@
                   <h5 class="card-title">{{$articulo->name}}</h5>
                   <p class="card-text">{{$articulo->description}}</p>
                   <h4 class="card-text">{{$articulo->cost}}€</h4>
+                  @if ($articulo->stock > 0)
                   <form action="{{route('productDetail')}}" method="POST">
                     @csrf
                     <input type="hidden" name="id" value="{{$articulo->id}}">
                     <input class="btn btn-primary" type="submit" value="Comprar"> 
                   </form>
+                  @else
+                  <h1 class="px-2 py-2 my-2 fs-3 inline-flex leading-6 font-semibold rounded-full bg-red-100 text-red-800">AGOTADO</h1>
+                  @endif
                 </div>
               </div>
             </div>
