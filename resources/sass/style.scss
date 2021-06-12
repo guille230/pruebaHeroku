@@ -213,7 +213,6 @@ h1, h2, h3{
 }
 
 .background-title-blogs{
-    background-image: url('https://p4.wallpaperbetter.com/wallpaper/104/151/773/material-miui-9-stock-wallpaper-preview.jpg');
     position: absolute;
     width: 49%;
     height: 56%;
@@ -241,10 +240,6 @@ h1, h2, h3{
 .frame{
     width: 100%;
     height: 100%;
-}
-
-.introBlog-container{
-    background-color: papayawhip;
 }
 
 .videoCol{
@@ -362,6 +357,206 @@ h1, h2, h3{
     font-size: 2rem;
     align-self: center;
   }
+
+  .producto{
+    width: 20rem;height: 17rem;
+}
+.fondoIndex{
+    background: rgb(196,99,185);
+    background: linear-gradient(135deg, rgba(196,99,185,1) 10%, rgba(255,255,255,1) 51%, rgba(98,73,201,1) 99%);
+}
+.fondoGradienteBlog{
+    background: rgb(196,99,185);
+    background: linear-gradient(135deg, rgba(196,99,185,1) 10%, rgba(255,255,255,1) 51%, rgba(98,73,201,1) 99%);
+}    
+@media screen and (max-width:430px) {
+    .fondoGradienteBlog{
+        background: rgb(196,99,185);
+        background: linear-gradient(180deg, rgba(196,99,185,1) 0%, rgba(255,255,255,1) 50%, rgba(98,73,201,1) 100%);
+    } 
+}
+
+
+/* Dado Grande */
+.imgInicio{
+    height: 100vh;
+    perspective: 1000px;
+  }
+  
+  .imgInicio,
+  .dadoGira,
+  .dadoGira > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+  }
+  
+  .dadoGira {
+    width: 250px;
+    height: 250px;
+    background-color: transparent;
+    animation: rolling 10s 1.5s linear infinite reverse;
+    /* transform: rotateX(90deg); */
+  }
+  .dadoGira > div {
+    position: absolute;
+    font-size: 10em;
+    color: white;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #ffffff69;
+    background: linear-gradient(45deg, #4332a3, #607d8b);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 30px;
+    gap: 10px;
+  }
+  .dadoGira > div > div{
+    background-color: #fff;
+    border-radius: 50%;
+    width: 95%;
+  height: 95%;
+  
+  
+  }
+  .point-1{
+    grid-area: 1/1;
+  }
+  .point-3{
+    grid-area: 1/3;
+  }
+  .point-4{
+    grid-area: 3/2;
+  }
+  .point-5{
+    grid-area: 2/2;
+  }
+  .point-5{
+    grid-area: 2/2;
+  }
+  .point-7{
+    grid-area: 3/1;
+  }
+  .point-9{
+    grid-area: 3/3;
+  }
+  
+  
+  
+  
+  /**********************************/
+  .one {
+    transform: translateZ(125px);
+  }
+  .two {
+    transform: translateZ(-125px) rotateY(-90deg);
+    transform-origin: left;
+  }
+  .three {
+    transform: translateZ(-125px) rotateY(180deg);
+  }
+  .four {
+    transform: translateZ(-125px) rotateY(90deg);
+    transform-origin: right;
+  }
+  .five {
+    transform: translateY(-125px) rotateX(90deg);
+  }
+  .six {
+    transform: translateY(125px) rotateX(90deg) rotateY(180deg);
+  }
+  
+  @keyframes rolling {
+    0% {
+      transform: rotate3d(3, 4, 1, 0deg);
+    }
+    100% {
+      transform: rotate3d(3, 4, 1, 720deg);
+    }
+  }
+  .margenDerecha{
+      margin-right: 20rem;
+  }
+  .titulo{
+      font-size: 4rem;
+  }
+  .cuerpoIntroBlog{
+    font-size: 1.5rem;
+  }
+  @media screen and (max-width:430px) {
+    .textoBlog{
+        width: 100%;
+        text-align: center;    
+    }
+}
+  .titleBlogs{
+    font-size: 4rem;
+    text-align: center;  
+  }
+  .titleLanding{
+    text-align: center;
+    width: fit-content;
+    margin-top: 1rem;
+    background-color: white;
+    height: fit-content;
+  }
+
+  .tituloEntrada{
+      font-size: 2rem;
+  }
+  .tituloPartida{
+    font-size: 3rem;
+    color: white;
+}
+.tituloPartida:hover{
+    color: brown;
+}
+ .fondoTit:hover{
+     background-color: gray;
+ }
+ .detallesPartida{
+     font-size: 1.5rem;
+     
+ }
+ .enviar{
+    background-color: rgb(0, 95, 158);
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+  }
+  .enviar:hover{
+    background-color: #c96060;
+  color: black;
+  }
+  .nombreProducto{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+  }
+  .textoProductos{
+    font-size: 1.3rem;
+  }
+  .productTitle{
+      font-size: 3rem;
+  }
+  .productoDescription{
+      font-size: 1.2rem;
+  }
+  .enviarCarrro{
+    background-color: rgb(0, 95, 158);
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 2px 1px;
+    }
+
 
   //Blog
   header.masthead {
