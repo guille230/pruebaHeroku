@@ -591,6 +591,35 @@ body {
   margin: 2px 1px;
 }
 
+.enviarDiscord {
+  background-color: #005f9e;
+  border: none;
+  color: white;
+  padding: 8px 18px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition: 0.3s;
+}
+
+.enviarDiscord:hover {
+  background-color: #c96060;
+  color: black;
+}
+
+.anchoEntero {
+  width: 100%;
+}
+
+.sistema {
+  width: 5rem;
+  height: 5rem;
+}
+
+.bannerImage {
+  height: 30rem;
+}
+
 header.masthead {
   position: relative;
   margin-bottom: 3rem;

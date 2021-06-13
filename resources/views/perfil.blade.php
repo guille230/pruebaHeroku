@@ -32,7 +32,7 @@
 </div>
 <div class="row mt-4 mb-4">
     <div class="col-6 d-flex justify-content-center">
-        <img class="ImagenPerfil"src="{{$user->iconImage}}" alt="Icon">
+        <img class="ImagenPerfil bannerImage" src="{{$user->iconImage}}" alt="Icon">
         @if ($user->id == $me->id)
         <i class="fas fa-pencil-alt" data-bs-toggle="modal" data-bs-target="#modalIcon"></i>   
         @endif

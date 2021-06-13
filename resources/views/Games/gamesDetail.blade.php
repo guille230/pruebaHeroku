@@ -12,10 +12,16 @@
         </div>
     </div>
     <div class="row border border-dark">
+        <div class="col text-center py-2 border-end border-dark d-flex justify-content-center ">
+            <h3 class="detallesPartida mx-2 align-self-center">Servidor de Discord:</h3>
+            <a class="enviarDiscord rounded" href="https://discord.gg/5vQtnbp7Gq" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+    </div>
+    <div class="row border border-dark">
         <div class="col-6 text-center py-2 border-end border-dark d-flex justify-content-center "> 
         <h3 class="detallesPartida">Sistema: <img class="sistema" src="{{asset('img/'.$partidas->system.'.png')}}" alt="Card image cap" width="70" height="70" data-bs-toggle="tooltip" data-bs-placement="bottom" title="{{$partidas->system}}"></h3>
         </div>
-        <div class="col-6 text-center py-2"> 
+        <div class="col-6 text-center py-2 d-flex justify-content-center align-items-center"> 
             <?php
                 $tipo;
                 switch ($partidas->type) {
