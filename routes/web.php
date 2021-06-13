@@ -64,9 +64,9 @@ Route::group(['auth:sanctum', 'verified'], function () {
     Route::resource('gestionBlog', \App\Http\Controllers\DashboardBlogController::class);
 });
 
-/*Route::middleware(['auth:sanctum', 'verified'], function () {
-    
-});*/
+//ayuda enviada
+Route::view('/ayuda', 'ayuda')->name('ayuda');
+Route::post('/ayuda/gracias',[AyudaController::class, 'index'])->name('ayudaEnviada');
 
 
 
