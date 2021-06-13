@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Create Task
+            Crear Producto
         </h2>
     </x-slot>
 
@@ -11,33 +11,33 @@
                 <form method="post" action="{{ route('gestionProductos.store') }}">
                     @csrf
                     <div class="shadow overflow-hidden sm:rounded-md">
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 py-3 bg-white sm:p-6">
                             <label for="name" class="block font-medium text-sm text-gray-700">Nombre</label>
                             <input type="text" name="name" id="name" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('name', '') }}" required/>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 pb-3 bg-white sm:p-6">
                             <label for="name" class="block font-medium text-sm text-gray-700">Imagen</label>
                             <input type="text" name="image" id="image" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('image', '') }}" required/>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 pb-3 bg-white sm:p-6">
                             <div>
                                 <label for="cost" class="block font-medium text-sm text-gray-700">Precio</label>
                                 <input type="text" name="cost" id="cost" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('cost', '') }}" required/>
                             </div>
-                            <div>
-                                <label for="name" class="block font-medium text-sm text-gray-700">Stock</label>
-                                <input type="text" name="stock" id="stock" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('stock', '') }}" required />
-                            </div>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 pb-3 bg-white sm:p-6">
+                            <label for="name" class="block font-medium text-sm text-gray-700">Stock</label>
+                            <input type="text" name="stock" id="stock" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('stock', '') }}" required />
+                        </div>
+                        <div class="px-4 pb-3 bg-white sm:p-6">
                             <label for="name" class="block font-medium text-sm text-gray-700">Distrubuidor</label>
                             <input type="text" name="dealer" id="dealer" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('dealer', '') }}" required/>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 pb-3 bg-white sm:p-6">
                             <label for="name" class="block font-medium text-sm text-gray-700">Descripcion</label>
                             <input type="text" name="description" id="description" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('description', '') }}" required/>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 pb-3 bg-white sm:p-6">
                             <label for="name" class="block font-medium text-sm text-gray-700">tags</label>
                             <input type="text" name="tags" id="tags" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('tags', '') }}" required/>
                         </div>

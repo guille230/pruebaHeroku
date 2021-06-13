@@ -21,19 +21,19 @@
                     @csrf
                     @method('PUT')
                     <div class="shadow overflow-hidden sm:rounded-md">
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 py-3 bg-white sm:p-6">
                             <label for="headline" class="block font-medium text-sm text-gray-700">Titular</label>
                             <input type="text" name="headline" id="headline" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('headline', $blog->headline) }}" required/>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 py-3 bg-white sm:p-6">
                             <label for="name" class="block font-medium text-sm text-gray-700">Imagen</label>
                             <input type="text" name="image" id="image" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('image', $blog->image) }}" required/>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 py-3 bg-white sm:p-6">
                             <label for="name" class="block font-medium text-sm text-gray-700">tags</label>
                             <input type="text" name="tags" id="tags" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('tags', $blog->tags) }}" required/>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 py-3 bg-white sm:p-6">
                             <label for="body" class="form-label">Cuerpo</label>
                             <textarea class="form-control" id="body" rows="3" name="body" value="{{ old('body', '') }}" required>{{$blog->body}}</textarea>
                         </div>

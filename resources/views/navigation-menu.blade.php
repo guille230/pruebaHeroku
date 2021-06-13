@@ -117,14 +117,24 @@ integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwr
                         </x-slot>
 
                         <x-slot name="content">
-                            <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
-                                {{ __('Manage Account') }}
-                            </div>
+                            <form method="POST" action="{{ route('perfil') }}">
+                                @csrf
+                                <input type="hidden" name="idus" value="{{$us->id}}">
+                                <x-jet-dropdown-link href="{{ route('perfil') }}"
+                                         onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                    {{ __('Perfil') }}
+                                </x-jet-dropdown-link>
+                            </form>
 
-                            <x-jet-dropdown-link href="{{ route('profile.show') }}">
-                                {{ __('Profile') }}
-                            </x-jet-dropdown-link>
+
+                            {{-- <form method="POST" action="{{ route('perfil') }}" style=" margin-bottom: 0;">
+                                @csrf
+                                <input type="hidden" name="idus" value="{{$us->id}}">
+                                <a class="dropdown-item" onclick="event.preventDefault(); this.closest('form').submit();" style="cursor: pointer">
+                                    Perfil
+                                </a>
+                            </form> --}}
 
                             <x-jet-dropdown-link href="{{ route('index') }}">
                                 {{ __('Home') }}
@@ -145,7 +155,7 @@ integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwr
                                 <x-jet-dropdown-link href="{{ route('logout') }}"
                                          onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                    {{ __('Log Out') }}
+                                    {{ __('Salir') }}
                                 </x-jet-dropdown-link>
                             </form>
                         </x-slot>

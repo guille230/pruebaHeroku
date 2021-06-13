@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            Create Task
+            Crear entrada
         </h2>
     </x-slot>
 
@@ -20,19 +20,19 @@
                 <form method="post" action="{{ route('gestionBlog.store') }}">
                     @csrf
                     <div class="shadow overflow-hidden sm:rounded-md">
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 py-3 bg-white sm:p-6">
                             <label for="headline" class="block font-medium text-sm text-gray-700">Titular</label>
                             <input type="text" name="headline" id="headline" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('headline', '') }}" required/>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 py-3 bg-white sm:p-6">
                             <label for="name" class="block font-medium text-sm text-gray-700">Imagen</label>
                             <input type="text" name="image" id="image" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('image', '') }}" required/>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 py-3 bg-white sm:p-6">
                             <label for="name" class="block font-medium text-sm text-gray-700">tags</label>
                             <input type="text" name="tags" id="tags" type="text" class="form-input rounded-md shadow-sm mt-1 block w-full" value="{{ old('tags', '') }}" required/>
                         </div>
-                        <div class="px-4 py-5 bg-white sm:p-6">
+                        <div class="px-4 py-3 bg-white sm:p-6">
                             <label for="body" class="form-label">Cuerpo</label>
                             <textarea class="form-control" id="body" name="body" rows="3" value="{{ old('body', '') }}" required></textarea>
                         </div>
