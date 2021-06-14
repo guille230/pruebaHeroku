@@ -17,7 +17,6 @@
         "livewire/livewire": "^2.0",
         "maatwebsite/laravel-sidebar": "~2.1",
         "predis/predis": "^1.1",
-        "barryvdh/laravel-debugbar": "^3.6",
         "facade/ignition": "^2.5",
         "fakerphp/faker": "^1.9.1",
         "laravel/sail": "^1.0.1",

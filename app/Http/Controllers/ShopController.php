@@ -9,7 +9,6 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\View;
-use Barryvdh\Debugbar\Facade as Debugbar;
 
 class ShopController extends Controller
 {

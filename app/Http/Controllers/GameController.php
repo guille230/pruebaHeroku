@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Search;
 use App\Models\Partidas;
 use Carbon\Carbon;
-use Barryvdh\Debugbar\Facade as Debugbar;
-
 class GameController extends Controller
 {
     public function index()
@@ -22,7 +20,6 @@ class GameController extends Controller
         $partida = DB::table('partidas')->where('id',$id)->first();
         $creator = $partida->creator;        
         $usuarios = DB::table('usuarios')->where('id',$creator)->first();
-        Debugbar::info($usuarios);
         $usupa = DB::table('usuarios_partidas')->where('id_usuarios',$id)->first();
 
         return view('Games.gamesDetail',['partidas' => $partida,'usuarios'=>$usuarios,'usuarios_partidas'=>$usupa]);
