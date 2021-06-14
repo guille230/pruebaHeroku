@@ -601,10 +601,41 @@ h1, h2, h3{
     .sistema{
       width: 5rem;
       height: 5rem;
+    }.anchoEntero{
+      width: 100%;
+    }
+    .sistema{
+      width: 5rem;
+      height: 5rem;
     }
     .bannerImage{
       height: 30rem;
     }
+    footer{
+  position: absolute;
+      bottom: 0;
+      width: 100%;
+    }
+    @media screen and (min-width: 760px) {
+      .margenDerecha{
+        margin-right: 20rem;
+    }
+    }
+  @media screen and (max-width: 360px) {
+    .titleLanding{
+      margin-left: 18rem;
+  }
+  }
+  @media screen and (max-width: 770px) {
+    .imgInicio{
+      visibility: hidden;
+  }
+  }
+    .bannerImage{
+      height: 30rem;
+    }
+
+
 
   //Blog
   header.masthead {

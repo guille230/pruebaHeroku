@@ -13,7 +13,7 @@
           <p class="indexDesc my-3">Fireroll es tu punto de partida para conocer a nuevas personas para introduciros en el mundo del rol.</p>
           <p class="indexDesc my-3">Gracias a nuestras nuevas tecnologias podras dar rienda suelta a tu imaginacion y tus tiradas de dados se sentiran igual que si estuvieras en fisico</p>
         </div>
-        <div class="col-6 imgInicio d-flex align-items-center">
+        <div class="col-6 imgInicio d-sm-flex align-items-center d-none">
           <div class="container dadoGira">
             <div class="one">
               <div class="point-5"></div>
