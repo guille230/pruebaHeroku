@@ -69,5 +69,8 @@ Route::group(['auth:sanctum', 'verified'], function () {
 Route::view('/ayuda', 'ayuda')->name('ayuda');
 Route::post('/ayuda/gracias',[AyudaController::class, 'index'])->name('ayudaEnviada');
 
+//Privacidad y Cookies
+Route::view('/privacidad', 'privacidad')->name('privacidad');
+Route::view('/cookies', 'cookies')->name('cookie');
 
 

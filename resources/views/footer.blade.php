@@ -12,8 +12,8 @@
         <!--/.First column-->
         <!--Second column-->
         <div class="col-md-6 footer-first-col">
-          <a href="#" class="enlaceRe  mx-3">Politica de Cookies</a></li>
-          <a href="#" class="enlaceRe  mx-3">Aviso legal</a></li>
+          <a href="{{route('cookies')}}" class="enlaceRe  mx-3">Politica de Cookies</a></li>
+          <a href="{{route('privacidad')}}" class="enlaceRe  mx-3">Aviso legal</a></li>
           <a href="{{route('ayuda')}}" class="enlaceRe  mx-3">Ayuda</a></li>
           </ul>
         </div>
